@@ -58,11 +58,8 @@ a:link, a:visited{
     text-decoration: none;    
     color: rgb(206, 197, 197);
 }
-a:hover{
+.link-upper:hover{
     font-size: 35px;
-}
-a:active{
-    text-decoration: underline;
 }
 p{
     text-align: left;
@@ -98,4 +95,37 @@ p{
 #rocket-gif{
     width: 50px;
     display: block;
+}
+#github:hover{
+    color: #6e5494;
+}
+
+#instagram:hover{
+    background: radial-gradient(at 50% 50%,#405DE6,#5851db,#883ab4,#C13584,#e1306c,#fd1d1d,#f56040,#f77737,#fcaf45,#ffdc80);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#linkedin:hover{
+    color: rgb(40,103,178); 
+}
+#facebook:hover{
+    color: rgb(66,103,178);
+}
+#sections-blogs{
+    display: flex;
+}
+#top-paragraph{
+    text-align: right;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+a:active{
+    text-decoration: underline;
+}
+.summary-links:hover{
+    color: aqua;
+    font-weight: 800;
+}
+#top-link:hover{
+    text-decoration: underline;
 }

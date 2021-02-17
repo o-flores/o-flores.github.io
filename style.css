@@ -38,9 +38,8 @@
     border-radius: 100%;
     margin-top: 10px;
 }
-#sumary{
-    padding-top: 40px;
-    padding-left: 50px;
+.sections{
+    padding: 40px 50px 20px;
 }
 
 body{
@@ -68,27 +67,35 @@ a:active{
 p{
     text-align: left;
 }
+#description-paragraph{
+    width: 75%;
+}
+#candy-section{
+    display: flex;
+}
+.candys{
+    display: block;
+}
 
 .candy-picture{
     width: 220px;
-    vertical-align:bottom;
-    margin-left:100px;
-    margin-right: 75px;
-}
-#FotoA{
-    margin-top: -15px;
-    margin-left: 41px;
-}
-#FotoB{
-    margin-top: -34px;
-    margin-left: 561px;
-}
-#FotoC{
-    margin-top: -34px;
-    margin-left: 923px;
+    margin-right: 80px;
+    margin-left: 80px;
 }
 .candy-description{
     font-size: 15px;
     font-weight: 800;
+    text-align: center;
     font-style: italic;
+}
+#cacau-instagram:link, #cacau-instagram:visited{
+    text-decoration: underline;
+}
+#rocket{
+    display: flex;
+    align-items:baseline;
+}
+#rocket-gif{
+    width: 50px;
+    display: block;
 }

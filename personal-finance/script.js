@@ -133,6 +133,7 @@ const getLocalStorage = (event) => {
   if(!event.target.classList.contains('selected')) return;
   const month = event.target.innerText;
   tBody.innerText = '';
+  updateAll();
   for (let index = 0; index < localStorage.length; index += 1) {
     if (localStorage.key(index).split('-')[0] === month) {
       const row = document.createElement('tr');

@@ -11,7 +11,7 @@ body {
 }
 
 header {
-  background: linear-gradient(#6F48C9,#8257E5,#9164FA,#9F75FF);
+  background: linear-gradient(#9F75FF,#9164FA,#8257E5,#6F48C9);
   padding: 3rem 0 4rem;
   text-align: center;
   font-weight: 900;
@@ -32,13 +32,13 @@ ul li {
 }
 
 ul li:hover {
-  background-color: white;
+  background-color:#9F75FF;
   cursor: pointer;
 }
 
 .selected {
-  background-color: white;
-  border: 1px solid #494D4B;
+  background-color:#9F75FF;
+  color: white;
 }
 
 #summary {
@@ -72,7 +72,6 @@ ul li:hover {
 }
 
 .fas {
-  margin-right: 3rem;
   font-size: 1.25rem;
 }
 
@@ -101,6 +100,7 @@ ul li:hover {
 a h3:hover {
   text-decoration: underline;
   color: #6F48C9;
+  cursor: pointer;
 }
 
 a:visited {

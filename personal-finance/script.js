@@ -70,6 +70,7 @@ const addTransaction = () => {
     inputs.forEach((input) => input.value = '');
     updateAll();
     hideOverlay();
+    saveOnLocalStorage();
   })
 }
 
@@ -110,10 +111,14 @@ const updateTotal = () => {
 
 const deleteFromLocalStorage = (event) => {
   const children = event.childNodes;
-  console.log(children[0].innerText);
   const selected = document.querySelector('.selected');
   const month = selected.innerText;
-  localStorage.removeItem(`${month}-${children[0].innerText}-${children[1].innerText}-${children[2].innerText}`)
+  const savedTransactions = JSON.parse(localStorage.getItem(month));
+  const newSavedTransactions = savedTransactions.filter((transaction) => (
+    transaction.description !== children[0].innerText
+    || transaction.value !== children[1].innerText
+    || transaction.date !== children[2].innerText))
+  localStorage.setItem(`${month}`, JSON.stringify(newSavedTransactions));
 }
 
 const deleteRow = (event) => {
@@ -139,49 +144,53 @@ const monthsClicked = () => {
 };
 
 const saveOnLocalStorage = () => {
-  saveBtn.addEventListener('click', () => {
-    const selected = document.querySelector('.selected');
-    const rows = document.querySelectorAll('tbody tr');
-    rows.forEach((row) => {
-      const tds = row.childNodes;
-      const array = [];
-      tds.forEach((td) => array.push(td.innerText))
-      const JSONArray = JSON.stringify(array)
-      localStorage.setItem(`${selected.innerText}-${JSON.parse(JSONArray)[0]}-${JSON.parse(JSONArray)[1]}-${JSON.parse(JSONArray)[2]}`, JSONArray);
+  const selected = document.querySelector('.selected');
+  const rows = document.querySelectorAll('tbody tr');
+  const array = [];
+  rows.forEach((row) => {
+    const tds = row.childNodes;
+    const obj = {};
+    tds.forEach((td, index) => {
+      if (index === 0) obj['description'] = td.innerText;
+      if (index === 1) obj['value'] = td.innerText;
+      if (index === 2) {
+        obj['date'] = td.innerText;
+        array.push(obj)
+      }
     })
-    hideOverlay();
-  });
+    const JSONArray = JSON.stringify(array)
+    localStorage.setItem(`${selected.innerText}`, JSONArray);
+  })
+  hideOverlay();
 }
 
 const getLocalStorage = (event) => {
-  if(!event.target.classList.contains('selected')) return;
+  if (!event.target.classList.contains('selected')) return;
   const month = event.target.innerText;
   tBody.innerText = '';
   updateAll();
-  for (let index = 0; index < localStorage.length; index += 1) {
-    if (localStorage.key(index).split('-')[0] === month) {
-      const row = document.createElement('tr');
-      const values = JSON.parse(localStorage.getItem(localStorage.key(index)));
-      values.forEach((value, index) => {
-        const td = document.createElement('td');
-        if (index === 1) {
-          const number = parseFloat(value.split('R')[0]);
-          number < 0 ? td.classList.add('expenses') : td.classList.add('incomes');
-        }
-        td.innerText = value;
-        row.appendChild(td);
-        row.addEventListener('click', (event) => deleteRow(event.currentTarget));
-      });
-      tBody.appendChild(row);
-      updateAll();
-    }
-  }
+  const savedTransactions = JSON.parse(localStorage.getItem(month)) || [];
+  const keys = ['description', 'value', 'date'];
+  savedTransactions.forEach((transaction) => {
+    const row = document.createElement('tr');
+    keys.forEach((key) => {
+      const td = document.createElement('td');
+      if (key === 'value') {
+        const number = parseFloat(transaction[key]);
+        number < 0 ? td.classList.add('expenses') : td.classList.add('incomes');
+      }
+      td.innerText = transaction[key];
+      row.appendChild(td);
+      row.addEventListener('click', (event) => deleteRow(event.currentTarget));
+    })
+    tBody.appendChild(row);
+    updateAll();
+  })
 }
 
 window.onload = () => {
   addTransaction();
   monthsClicked();
-  saveOnLocalStorage();
   showOverlay();
   clickBackBtn();
 }

@@ -41,8 +41,15 @@ ul li:hover {
   border: 1px solid #494D4B;
 }
 
+#summary {
+  display: flex;
+  width: 70%;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
 .cards {
-  width: 40%;
+  width: 30%;
   margin: auto;
   margin-top: 2rem;
   background-color: #F7F8FA;
@@ -82,15 +89,59 @@ ul li:hover {
   margin-top: 2rem;
 }
 
-#balance h3 {
+#balance h3, #balance h2 {
   margin-bottom: 0.75rem;
 }
 
+#balance a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+a h3:hover {
+  text-decoration: underline;
+  color: #6F48C9;
+}
+
+a:visited {
+  color: #494D4B;
+}
+
+
+#balance .container-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+#balance .modal form {
+  background-color: #f0f2f5;
+  padding: 2.4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.inactive {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.active {
+  opacity: 1;
+  visibility: visible;
+}
+
 .inputs {
-  border: #F7F8FA 1px solid;
+  border: #F7F8FA 5px solid;
   border-radius: 0.2rem;
-  padding: 0.5rem;
-  margin-right: 0.75rem;
+  padding: 0.6rem;
+  margin-bottom: 0.75rem;
 }
 
 button {
@@ -100,6 +151,7 @@ button {
   border-radius: 0.3rem;
   color: #494D4B;
   font-weight: 700;
+  margin-bottom: 0.75rem;
 }
 
 #transactions {
@@ -110,7 +162,6 @@ table {
   width: 50%;
   margin: auto;
   border-spacing: 0 0.5rem;
-  /* text-align: left; */
 }
 
 tr td:first-child, 

@@ -34,7 +34,7 @@
     </ul>
   </section>
   <main>
-    <section>
+    <section id='summary'>
       <div class="cards">
         <h3>Incomes</h2>
           <div class="values">
@@ -63,16 +63,22 @@
 
     <section id="balance">
       <h2>Month Balance</h2>
-      <h3>Add your expense or income</h3>
-
-      <input type="text" name="expense" id="input-description" class="inputs" placeholder="Ex: groceries" required>
-
-      <input type="number" name="value" id="input-value" class="inputs" placeholder="Ex: 25,90">
-
-      <input type="date" name="date" id="input-date" class="inputs" required>
-      
-      <button id='add-btn' type="button">Add!</button>
-      <button id="save-btn">Save</button>
+      <a href="#">
+        <h3>+ Add your expense or income</h3>
+      </a>
+      <div class="container-overlay inactive">
+        <div class="modal">
+          <form action="">
+            <h2>New Transaction</h2>
+            <input type="text" name="expense" id="input-description" class="inputs" placeholder="Ex: groceries">
+            <input type="number" name="value" id="input-value" class="inputs" placeholder="Ex: 25,90">
+            <input type="date" name="date" id="input-date" class="inputs">
+            <button id='add-btn' type="button">Add!</button>
+            <button id='back-btn' type="button">Back</button>
+            <button id="save-btn" type="button">Save</button>
+          </form>
+        </div>
+      </div>
       <div id="transactions">
         <table>
           <thead>
@@ -80,6 +86,7 @@
               <th>Dresciption</th>
               <th>Value</th>
               <th>Date</th>
+              <th></th>
             </tr>
           </thead>
           <tbody>

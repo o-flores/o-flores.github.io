@@ -9,6 +9,7 @@ const expensesCard = document.querySelector('#expenses');
 const totalCard = document.querySelector('#total');
 const months = document.querySelectorAll('#months li');
 const saveBtn = document.getElementById('save-btn');
+const backBtn = document.getElementById('back-btn');
 
 const verifyInputs = () => {
   let result = true;
@@ -29,14 +30,35 @@ const createRow = (input) => {
   return td;
 }
 
+const hideOverlay = () => {
+  const overlayContainer = document.querySelector('.container-overlay');
+  overlayContainer.classList.remove('active');
+  overlayContainer.classList.add('inactive');
+}
+
+const showOverlay = () => {
+  const transactionLink = document.querySelector('#balance a h3');
+  transactionLink.addEventListener('click', () => {
+    const selected = document.querySelector('.selected');
+    if (!selected) {
+      alert('Select a month');
+      return;
+    }
+    const overlayContainer = document.querySelector('.container-overlay');
+    overlayContainer.classList.add('active');
+    overlayContainer.classList.remove('inactive');
+  })
+}
+
+const clickBackBtn = () => {
+  backBtn.addEventListener('click', hideOverlay);
+}
+
+
 const addTransaction = () => {
   addBtn.addEventListener('click', () => {
-    const selected = document.querySelector('.selected');
     if (!verifyInputs()) {
       alert('Type all the infos');
-    }
-    if (!selected) {
-      alert('Selecione um mês');
       return;
     }
     const tr = document.createElement('tr');
@@ -47,6 +69,7 @@ const addTransaction = () => {
     tBody.appendChild(tr);
     inputs.forEach((input) => input.value = '');
     updateAll();
+    hideOverlay();
   })
 }
 
@@ -126,6 +149,7 @@ const saveOnLocalStorage = () => {
       const JSONArray = JSON.stringify(array)
       localStorage.setItem(`${selected.innerText}-${JSON.parse(JSONArray)[0]}-${JSON.parse(JSONArray)[1]}-${JSON.parse(JSONArray)[2]}`, JSONArray);
     })
+    hideOverlay();
   });
 }
 
@@ -158,4 +182,6 @@ window.onload = () => {
   addTransaction();
   monthsClicked();
   saveOnLocalStorage();
+  showOverlay();
+  clickBackBtn();
 }

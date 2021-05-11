@@ -1,14 +1,20 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
 
-class Post extends Component{
-  render(){
+class Post extends Component {
+  render() {
 
-    const { infos } = this.props;
+    const { post } = this.props;
+    const { id } = post;
 
-    return(
-      <div className='post-container'>
-        <h1>{ infos.title }</h1>
-        <p>{ infos.body }</p>
+
+    return (
+      <div className='posts-container'>
+          <div className='post'>
+            <h1>{post.title}</h1>
+            <p>{post.body}</p>
+            <Link to={`/post/${id}`}>Saiba mais</Link>
+          </div>
       </div>
     )
   }

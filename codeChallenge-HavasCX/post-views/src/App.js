@@ -1,6 +1,8 @@
 import Header from './components/Header';
-import Post from './components/Post';
+import PostDetails from './pages/PostDetails'
+import AllPosts from './pages/AllPosts'
 import React, { Component } from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import './App.css';
 
 class App extends Component {
@@ -18,7 +20,6 @@ class App extends Component {
   fetchPosts = async () => {
     const response = await fetch('https://jsonplaceholder.typicode.com/posts');
     const data = await response.json();
-    console.log(data);
     this.setState({ posts: data });
   }
   render() {
@@ -27,7 +28,12 @@ class App extends Component {
     return (
       <div>
         <Header />
-        { posts.map((post) => <Post key={ post.id } infos={ post } />) }
+        <BrowserRouter>
+          <Switch>
+            <Route exact path='/' render={() => <AllPosts posts={ posts } /> } />
+            <Route path='/post/:id' render={(props) => <PostDetails {...props} posts={ posts } />} />
+          </Switch>
+        </BrowserRouter>
       </div>
     )
   }

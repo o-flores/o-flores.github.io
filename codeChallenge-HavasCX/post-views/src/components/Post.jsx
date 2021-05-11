@@ -1,19 +1,20 @@
 import React, { Component } from 'react';
+import '../styles/post.css'
 import { Link } from 'react-router-dom'
 
 class Post extends Component {
   render() {
 
     const { post } = this.props;
-    const { id } = post;
+    const { id } = post
 
 
     return (
-      <div className='posts-container'>
+      <div className='post-container'>
           <div className='post'>
             <h1>{post.title}</h1>
             <p>{post.body}</p>
-            <Link to={`/post/${id}`}>Saiba mais</Link>
+            <Link className='link' to={`/post/${id}`}>Saiba mais</Link>
           </div>
       </div>
     )

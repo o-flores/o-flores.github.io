@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Post from '../components/Post';
+import { Link } from 'react-router-dom'
+import '../styles/postDetails.css'
 
 class PostDetails extends Component {
   render() {
@@ -8,7 +10,10 @@ class PostDetails extends Component {
     const post = posts.find((item) => item.id === parseInt(id));
 
     return (
-      <Post post={ post } />
+      <div className='post-container-details'>
+        <Post post={post} />
+        <Link to='/' >Voltar</Link>
+      </div>
     )
   }
 }

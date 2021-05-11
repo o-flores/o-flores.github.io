@@ -1,0 +1,7 @@
+.posts-container {
+  display: flex;
+  width: 80%;
+  flex-wrap: wrap;
+  margin: auto;
+  justify-content: space-around;
+}

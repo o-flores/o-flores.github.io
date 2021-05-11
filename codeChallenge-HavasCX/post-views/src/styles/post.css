@@ -1,0 +1,40 @@
+.post-container {
+  display: flex;
+  margin: 2rem 0.5rem;
+  width: 40%;
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border: 1px solid #FFF;
+  border-radius: 0.5rem;
+  background-color: #FFF;
+}
+.post h1{
+  font-size: 1.7rem;
+  text-align: justify;
+  margin-bottom: 1rem;
+}
+
+.post p {
+  font-size: 1.1rem;
+  text-align: justify;
+  margin-bottom: 1rem;
+}
+
+.link{
+  color: #494D4B;
+  text-decoration: none;
+  text-align: right;
+}
+
+.link:visited {
+  color: #494D4B;
+}
+
+.link:hover {
+  color: black;
+  text-decoration: underline;
+}

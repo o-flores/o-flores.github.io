@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../styles/AllPosts.css'
 import Post from '../components/Post';
 
 class AllPosts extends Component {
@@ -6,7 +7,7 @@ class AllPosts extends Component {
     const { posts } = this.props;
 
     return (
-      <div>
+      <div className='posts-container'>
         { posts.map((post) => <Post key={ post.id } post={post} />)}
       </div>
     )

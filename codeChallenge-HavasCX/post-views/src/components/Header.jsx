@@ -5,7 +5,10 @@ import { FaRegNewspaper, FaLinkedin, FaGithub } from 'react-icons/fa';
 function Header() {
   return (
     <header>
-      <a className='logo' href='/'><FaRegNewspaper /></a>
+      <a className='logo'
+        href='/'>
+        <FaRegNewspaper/>
+      </a>
       <h1 className='title'>News</h1>
       <div className="media">
         <a

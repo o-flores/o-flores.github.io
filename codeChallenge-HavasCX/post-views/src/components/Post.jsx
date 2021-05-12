@@ -13,7 +13,7 @@ class Post extends Component {
           <h2>{title}</h2>
           <p>{body}</p>
           <div className='links'>
-            {back && <Link className='link' to='/' >Voltar</Link>}
+            {back && <a className='link' href='/' >Voltar</a>}
             {details && <Link className='link' to={`/post/${id}`}>Saiba mais</Link>}
           </div>
         </div>

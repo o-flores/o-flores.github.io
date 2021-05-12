@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/codeChallenge-HavasCX/static/css/main.5a7906da.chunk.css",
+    "main.js": "/codeChallenge-HavasCX/static/js/main.b168bfd0.chunk.js",
+    "main.js.map": "/codeChallenge-HavasCX/static/js/main.b168bfd0.chunk.js.map",
+    "runtime-main.js": "/codeChallenge-HavasCX/static/js/runtime-main.ef1da716.js",
+    "runtime-main.js.map": "/codeChallenge-HavasCX/static/js/runtime-main.ef1da716.js.map",
+    "static/js/2.e1577df1.chunk.js": "/codeChallenge-HavasCX/static/js/2.e1577df1.chunk.js",
+    "static/js/2.e1577df1.chunk.js.map": "/codeChallenge-HavasCX/static/js/2.e1577df1.chunk.js.map",
+    "static/js/3.2ec97c4e.chunk.js": "/codeChallenge-HavasCX/static/js/3.2ec97c4e.chunk.js",
+    "static/js/3.2ec97c4e.chunk.js.map": "/codeChallenge-HavasCX/static/js/3.2ec97c4e.chunk.js.map",
+    "index.html": "/codeChallenge-HavasCX/index.html",
+    "static/css/main.5a7906da.chunk.css.map": "/codeChallenge-HavasCX/static/css/main.5a7906da.chunk.css.map",
+    "static/js/2.e1577df1.chunk.js.LICENSE.txt": "/codeChallenge-HavasCX/static/js/2.e1577df1.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ef1da716.js",
+    "static/js/2.e1577df1.chunk.js",
+    "static/css/main.5a7906da.chunk.css",
+    "static/js/main.b168bfd0.chunk.js"
+  ]
+}

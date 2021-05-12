@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Loading from '../components/Loading';
 import Post from '../components/Post';
 import '../styles/postDetails.css'
 
@@ -31,7 +32,7 @@ class PostDetails extends Component {
 
     if (this.props.posts.length === 0) {
       return (
-        <div>COE RAPAZIADA</div>
+        <Loading/>
       )
     }
 

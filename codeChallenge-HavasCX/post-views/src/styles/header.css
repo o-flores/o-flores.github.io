@@ -14,3 +14,14 @@ header {
   font-size: 2.5rem;
   margin-right: 1rem;
 }
+
+a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  opacity: 0.75;
+}
+
+a:hover{
+  opacity: 1;
+}

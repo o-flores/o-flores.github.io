@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../styles/allPosts.css'
 import Post from '../components/Post';
+import Loading from '../components/Loading';
 
 class AllPosts extends Component {
   render() {
@@ -8,10 +9,10 @@ class AllPosts extends Component {
 
     if (this.props.posts.length === 0) {
       return (
-        <div>COE RAPAZIADA</div>
+        <Loading />
       )
     }
-    
+
     return (
       <div className='posts-container'>
         { posts.map((post) => <Post

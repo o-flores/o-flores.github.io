@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../styles/post.css'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 class Post extends Component {
  

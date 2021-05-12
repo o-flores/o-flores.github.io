@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/codeChallenge-HavasCX/post-views/static/css/main.5a7906da.chunk.css",
-    "main.js": "/codeChallenge-HavasCX/post-views/static/js/main.b168bfd0.chunk.js",
-    "main.js.map": "/codeChallenge-HavasCX/post-views/static/js/main.b168bfd0.chunk.js.map",
-    "runtime-main.js": "/codeChallenge-HavasCX/post-views/static/js/runtime-main.53216fa4.js",
-    "runtime-main.js.map": "/codeChallenge-HavasCX/post-views/static/js/runtime-main.53216fa4.js.map",
-    "static/js/2.e1577df1.chunk.js": "/codeChallenge-HavasCX/post-views/static/js/2.e1577df1.chunk.js",
-    "static/js/2.e1577df1.chunk.js.map": "/codeChallenge-HavasCX/post-views/static/js/2.e1577df1.chunk.js.map",
-    "static/js/3.2ec97c4e.chunk.js": "/codeChallenge-HavasCX/post-views/static/js/3.2ec97c4e.chunk.js",
-    "static/js/3.2ec97c4e.chunk.js.map": "/codeChallenge-HavasCX/post-views/static/js/3.2ec97c4e.chunk.js.map",
+    "main.css": "/codeChallenge-HavasCX/post-views/static/css/main.d09d8b81.chunk.css",
+    "main.js": "/codeChallenge-HavasCX/post-views/static/js/main.57670a99.chunk.js",
+    "main.js.map": "/codeChallenge-HavasCX/post-views/static/js/main.57670a99.chunk.js.map",
+    "runtime-main.js": "/codeChallenge-HavasCX/post-views/static/js/runtime-main.0e032f5d.js",
+    "runtime-main.js.map": "/codeChallenge-HavasCX/post-views/static/js/runtime-main.0e032f5d.js.map",
+    "static/js/2.2c08efaf.chunk.js": "/codeChallenge-HavasCX/post-views/static/js/2.2c08efaf.chunk.js",
+    "static/js/2.2c08efaf.chunk.js.map": "/codeChallenge-HavasCX/post-views/static/js/2.2c08efaf.chunk.js.map",
+    "static/js/3.5c855b1b.chunk.js": "/codeChallenge-HavasCX/post-views/static/js/3.5c855b1b.chunk.js",
+    "static/js/3.5c855b1b.chunk.js.map": "/codeChallenge-HavasCX/post-views/static/js/3.5c855b1b.chunk.js.map",
     "index.html": "/codeChallenge-HavasCX/post-views/index.html",
-    "static/css/main.5a7906da.chunk.css.map": "/codeChallenge-HavasCX/post-views/static/css/main.5a7906da.chunk.css.map",
-    "static/js/2.e1577df1.chunk.js.LICENSE.txt": "/codeChallenge-HavasCX/post-views/static/js/2.e1577df1.chunk.js.LICENSE.txt"
+    "static/css/main.d09d8b81.chunk.css.map": "/codeChallenge-HavasCX/post-views/static/css/main.d09d8b81.chunk.css.map",
+    "static/js/2.2c08efaf.chunk.js.LICENSE.txt": "/codeChallenge-HavasCX/post-views/static/js/2.2c08efaf.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.53216fa4.js",
-    "static/js/2.e1577df1.chunk.js",
-    "static/css/main.5a7906da.chunk.css",
-    "static/js/main.b168bfd0.chunk.js"
+    "static/js/runtime-main.0e032f5d.js",
+    "static/js/2.2c08efaf.chunk.js",
+    "static/css/main.d09d8b81.chunk.css",
+    "static/js/main.57670a99.chunk.js"
   ]
 }

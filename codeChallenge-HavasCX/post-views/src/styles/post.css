@@ -5,6 +5,7 @@
 }
 
 .post {
+  color: #494D4B;
   display: flex;
   flex-direction: column;
   padding: 1rem;
@@ -12,15 +13,18 @@
   border-radius: 0.5rem;
   background-color: #FFF;
 }
-.post h1{
-  font-size: 1.7rem;
-  text-align: justify;
+
+.post h2{
+  text-align: center;
   margin-bottom: 1rem;
 }
 
 .post p {
+  width: 80%;
+  margin: auto;
   font-size: 1.1rem;
-  text-align: justify;
+  line-height: 130%;
+  text-align: center;
   margin-bottom: 1rem;
 }
 
@@ -37,4 +41,18 @@
 .link:hover {
   color: black;
   text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .post h2 {
+    font-size: 1.3rem;
+  }
+
+  .post p {
+    font-size: 0.9rem;
+  }
+
+  .post-container {
+    width: 80%;
+  }
 }

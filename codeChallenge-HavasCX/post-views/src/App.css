@@ -2,9 +2,9 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  color: #494D4B;
 }
 
 body {
   background-color: #E6E8EB;
+  font-family: 'Tinos', sans-serif;
 }

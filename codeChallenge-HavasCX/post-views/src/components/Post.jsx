@@ -12,7 +12,7 @@ class Post extends Component {
     return (
       <div className='post-container'>
           <div className='post'>
-            <h1>{post.title}</h1>
+            <h2>{post.title}</h2>
             <p>{post.body}</p>
             <Link className='link' to={`/post/${id}`}>Saiba mais</Link>
           </div>

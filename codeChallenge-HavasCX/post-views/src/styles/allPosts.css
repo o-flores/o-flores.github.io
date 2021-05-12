@@ -1,7 +1,13 @@
 .posts-container {
   display: flex;
-  width: 80%;
+  max-width: 80%;
   flex-wrap: wrap;
   margin: auto;
   justify-content: space-around;
+}
+
+@media (max-width: 600px) {
+  .posts-container {
+    width: 100%;
+  }
 }

@@ -12,7 +12,7 @@ class PostDetails extends Component {
     return (
       <div className='post-container-details'>
         <Post post={post} />
-        <Link to='/' >Voltar</Link>
+        <Link className='link' to='/' >Voltar</Link>
       </div>
     )
   }

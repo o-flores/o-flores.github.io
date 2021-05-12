@@ -28,6 +28,12 @@
   margin-bottom: 1rem;
 }
 
+.links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
 .link{
   color: #494D4B;
   text-decoration: none;

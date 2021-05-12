@@ -1,16 +1,25 @@
 import React from 'react';
 import '../styles/header.css';
-import { Link as a } from 'react-router-dom'
-import { FaRegNewspaper } from 'react-icons/fa'
+import { FaRegNewspaper, FaLinkedin, FaGithub } from 'react-icons/fa';
 
 function Header() {
   return (
     <header>
-      <div className='header-container'>
-        <div className='logo'>
-          <a href='/'><FaRegNewspaper /></a>
-        </div>
-        <h1 className='title'>News</h1>
+      <a className='logo' href='/'><FaRegNewspaper /></a>
+      <h1 className='title'>News</h1>
+      <div className="media">
+        <a
+          target='_blank'
+          rel='noreferrer'
+          href='https://www.linkedin.com/in/orlandoflores95/'>
+          <FaLinkedin />
+        </a>
+        <a
+          target='_blank'
+          rel='noreferrer'
+          href='https://github.com/o-flores'>
+          <FaGithub />
+        </a>
       </div>
     </header>
   )

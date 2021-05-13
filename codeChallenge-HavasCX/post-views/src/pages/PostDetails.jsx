@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Loading from '../components/Loading';
 import Post from '../components/Post';
 import '../styles/postDetails.css';
+import PropTypes from 'prop-types';
 
 class PostDetails extends Component {
 
@@ -29,8 +30,9 @@ class PostDetails extends Component {
 
     const post = this.setPost();
     const filteredPosts = this.changeFilteredPosts();
+    const { posts } = this.props;
 
-    if (this.props.posts.length === 0) {
+    if (posts.length === 0) {
       return (
         <Loading/>
       )
@@ -56,5 +58,9 @@ class PostDetails extends Component {
     )
   }
 }
+
+Post.propTypes = {
+  posts: PropTypes.array
+};
 
 export default PostDetails;

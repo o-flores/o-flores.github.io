@@ -3,10 +3,11 @@ import '../styles/allPosts.css'
 import Post from '../components/Post';
 import Loading from '../components/Loading';
 import { FaSearch } from 'react-icons/fa';
+import PropTypes from 'prop-types';
 
 class AllPosts extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       posts: [],
       search: '',
@@ -24,8 +25,8 @@ class AllPosts extends Component {
     this.setState({ search: value }, () => {
       const { posts } = this.props;
       const filteredPosts = posts.filter((post) => {
-        return post.body.includes(value)
-          || post.title.includes(value);
+        return post.body.toLowerCase().includes(value.toLowerCase())
+          || post.title.toLowerCase().includes(value.toLowerCase());
       });
       this.setState({ posts: filteredPosts })
     });
@@ -59,5 +60,10 @@ class AllPosts extends Component {
     )
   }
 }
+
+AllPosts.propTypes = {
+  posts: PropTypes.array
+};
+
 
 export default AllPosts;

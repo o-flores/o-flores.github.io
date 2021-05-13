@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../styles/post.css'
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 class Post extends Component {
  
@@ -21,5 +22,15 @@ class Post extends Component {
     )
   }
 }
+
+Post.propTypes = {
+  post: PropTypes.shape({
+    id: PropTypes.string,
+    title: PropTypes.string,
+    body: PropTypes.string,
+  }),
+  back: PropTypes.bool,
+  details: PropTypes.bool,
+};
 
 export default Post;

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../styles/allPosts.css'
 import Post from '../components/Post';
 import Loading from '../components/Loading';
+import { FaSearch } from 'react-icons/fa';
 
 class AllPosts extends Component {
   constructor(props) {
@@ -12,9 +13,9 @@ class AllPosts extends Component {
     }
   }
 
-  componentDidUpdate(prevProps){
-    if(prevProps.posts !== this.props.posts){
-      this.setState({posts: this.props.posts})
+  componentDidUpdate(prevProps) {
+    if (prevProps.posts !== this.props.posts) {
+      this.setState({ posts: this.props.posts })
     }
   }
 
@@ -31,7 +32,6 @@ class AllPosts extends Component {
   }
 
   render() {
-    console.log('render');
 
     const { posts } = this.state;
 
@@ -44,10 +44,8 @@ class AllPosts extends Component {
     return (
       <main>
         <div className='input'>
-          <label htmlFor="search">
-            <input onChange={this.handleChange} type='text' name='search'></input>
-            Search
-          </label>
+          <input onChange={this.handleChange} type='text' name='search'></input>
+          <span><FaSearch /></span>
         </div>
         <div className='posts-container'>
           {posts.map((post) => <Post

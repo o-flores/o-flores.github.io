@@ -7,7 +7,9 @@
 }
 
 .input {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .input input {
@@ -17,7 +19,8 @@
   border: #FFF;
 }
 
-.input label {
+.input span {
+  margin-left: 0.5rem;
   color: #494D4B;
 }
 

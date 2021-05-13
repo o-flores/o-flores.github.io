@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Loading from '../components/Loading';
 import Post from '../components/Post';
-import '../styles/postDetails.css'
+import '../styles/postDetails.css';
 
 class PostDetails extends Component {
 

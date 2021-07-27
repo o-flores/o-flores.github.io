@@ -1,0 +1,132 @@
+#auth-page {
+  display: flex;
+  align-items: stretch;
+  height: 100vh;
+
+  aside {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    padding: 120px 80px;
+
+    img {
+      max-width: 320px;
+    }
+
+    strong {
+      font: 700 36px 'Poppins', sans-serif;
+      margin-top: 20px;
+    }
+
+    p {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+  }
+
+  main {
+    flex: 1;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 0 32px;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 320px;
+    align-items: stretch;
+    text-align: center;
+
+    .btn-create-room {
+      background: #EF233C;
+      border: 0;
+      border-radius: 5px;
+      color: #fff;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      cursor: pointer;
+
+      transition: opacity 0.3s;
+
+      img {
+        margin-right: 20px;
+      }
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+
+    .separator {
+      font-size: 14px;
+      color: #8D99AE;
+      margin: 40px 0;
+      display: flex;
+      align-items: center;
+
+      &::before {
+        content: '';
+        flex: 1;
+        height: 1px;
+        background: #8D99AE;
+        margin-right: 15px;
+      }
+
+      &::after {
+        content: '';
+        flex: 1;
+        height: 1px;
+        background: #8D99AE;
+        margin-left: 15px;
+      }
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+
+      input {
+        height: 50px;
+        padding: 0px 16px;
+        border-radius: 5px;
+        border: 1px solid #8d99ae;
+        color: #2B2D42;
+      }
+
+      button {
+        margin-top: 20px;
+      }
+
+      input, button {
+        width: 100%;
+      }
+    }
+
+    h2 {
+      font-size: 28px;
+      margin-bottom: 40px;
+      font-family: 'Poppins', sans-serif;
+      color: #2B2D42;
+    }
+
+    p {
+      font-size: 14px;
+      color: #8D99AE;
+      margin-top: 15px;
+
+      a {
+        color: #EF233C;
+      }
+    }
+  }
+}

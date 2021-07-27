@@ -1,0 +1,91 @@
+.question-card-container {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 5px;
+  margin-top: 1rem;
+  background: #8D99AE;
+  box-shadow: 0px 2px 12px black;
+  color: #2B2D42;
+
+  &.highLighted {
+    border: 2px #D90429 solid;
+    background: #EDF2F4;
+  }
+
+  &.answered {
+    background: black;
+  }
+
+  p {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+  }
+
+  .user-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    .left-content {
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+      }
+
+      span {
+        margin-left: 0.8rem;
+        font-size: 0.9rem;
+      }
+    }
+
+    .right-content {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      button {
+        border: 0;
+        background: transparent;
+        cursor: pointer;
+        transition: filter 0.2s;
+        margin-right: 0.5rem;
+
+        span {
+          margin-right: 0.5rem;
+        }
+
+        &:hover {
+          filter: brightness(0.7);
+        }
+
+        &.like-button {
+          display: flex;
+          justify-content: center;
+          align-items: flex-end;
+          color: #2B2D42;
+
+          &.liked {
+            color: #D90429;
+
+            svg path {
+              stroke: #D90429;
+            }
+          }
+        }
+      }
+
+      span {
+        margin-right: 0.5rem;
+      }
+    }
+
+   
+  }
+}
